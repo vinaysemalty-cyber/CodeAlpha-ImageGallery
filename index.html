@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Image Gallery</title>
+
+  <!-- Link to our external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Page heading -->
+  <header>
+    <h1>My Image Gallery</h1>
+    <p>Click any image to see it bigger!</p>
+  </header>
+
+  <!-- This is the main container that holds all our images -->
+  <main class="gallery" id="gallery">
+
+    <!-- 
+      Each image is wrapped in a "gallery-item" div.
+      There are 21 images in total, numbered 1 to 21.
+      Replace the src paths with your own images later if you want!
+    -->
+    <div class="gallery-item"><img src="assets/placeholder/placeholder1.jpg" alt="Placeholder image 1"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder2.jpg" alt="Placeholder image 2"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder3.jpg" alt="Placeholder image 3"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder4.jpg" alt="Placeholder image 4"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder5.jpg" alt="Placeholder image 5"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder6.jpg" alt="Placeholder image 6"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder7.jpg" alt="Placeholder image 7"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder8.jpg" alt="Placeholder image 8"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder9.jpg" alt="Placeholder image 9"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder10.jpg" alt="Placeholder image 10"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder11.jpg" alt="Placeholder image 11"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder12.jpg" alt="Placeholder image 12"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder13.jpg" alt="Placeholder image 13"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder14.jpg" alt="Placeholder image 14"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder15.jpg" alt="Placeholder image 15"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder16.jpg" alt="Placeholder image 16"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder17.jpg" alt="Placeholder image 17"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder18.jpg" alt="Placeholder image 18"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder19.jpg" alt="Placeholder image 19"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder20.jpg" alt="Placeholder image 20"></div>
+    <div class="gallery-item"><img src="assets/placeholder/placeholder21.jpg" alt="Placeholder image 21"></div>
+
+  </main>
+
+  <!-- 
+    This is the "lightbox" - a popup box that shows a bigger version
+    of the image when you click on it. It starts off hidden.
+  -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="closeBtn">&times;</span>
+    <img src="" alt="Enlarged view" id="lightboxImg">
+  </div>
+
+  <!-- Link to our external JavaScript file (placed at the end so the page loads first) -->
+  <script src="script.js"></script>
+</body>
+</html>

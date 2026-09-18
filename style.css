@@ -1,0 +1,116 @@
+/* ============================
+   GENERAL PAGE STYLES
+   ============================ */
+
+/* Reset default margin/padding and use a simple box model everywhere */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Style the header at the top of the page */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #222;
+  color: #fff;
+}
+
+header h1 {
+  margin-bottom: 8px;
+}
+
+/* ============================
+   GALLERY GRID LAYOUT
+   ============================ */
+
+/* 
+  We use CSS Grid to arrange the images.
+  "auto-fill" + "minmax" makes the grid responsive:
+  it automatically adds/removes columns depending on screen width.
+*/
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Each image container */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer; /* Shows a "hand" cursor so users know it's clickable */
+  transition: transform 0.2s ease; /* Smooth zoom effect on hover */
+}
+
+/* Make the images fill their container nicely */
+.gallery-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Crops the image so it fills the box without stretching */
+  display: block;
+}
+
+/* A little "pop" effect when you hover over an image */
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+/* ============================
+   LIGHTBOX (POPUP) STYLES
+   ============================ */
+
+/* 
+  The lightbox covers the whole screen with a dark background.
+  It's hidden by default using "display: none" and
+  script.js will switch it to "display: flex" when needed.
+*/
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* This class is added by JavaScript to actually show the lightbox */
+.lightbox.active {
+  display: flex;
+}
+
+/* The enlarged image inside the lightbox */
+.lightbox img {
+  max-width: 90%;
+  max-height: 85%;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* The "X" close button in the top corner */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #ff5f5f;
+}
